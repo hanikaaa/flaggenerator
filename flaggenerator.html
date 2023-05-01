@@ -1,0 +1,134 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #left, #right, #center {
+            user-select: none;
+        }
+    
+        body{
+            background-color: pink;
+        }
+      
+        #left {
+            background-color: pink;
+         left:200px;
+         height:500px;
+         width: 200px;
+         top: 200px;
+    
+         position:absolute
+        }
+        #center{
+        background-color: pink;
+        left:400px;
+        height:500px;
+        width: 200px;
+        position:absolute;
+        top: 200px;
+        }
+        #right {
+            background-color: pink;
+         left:600px;
+         height:500px;
+        width: 200px;
+        position:absolute;
+        top: 200px;
+        }
+        p{
+            color: azure;
+            left: 20px;
+            font-size: 50px;
+            margin: 20px;
+        }
+        .info{
+            color: azure;
+            position: relative;
+            left: 20px;
+            font-size: 20px;
+        }
+        #text1{
+            
+            position: absolute;
+            left: 20px;
+            font-size: 15px;
+            width:fit-content;
+            margin: 15px;
+            
+        }
+        
+        
+     
+      
+        
+    </style>
+      
+    <body>
+        
+        <p>
+            Random color-stripe flag generator.
+        </p>
+        <div class="info"> There is a stripe flag somewhere on the screen. 'Click across' the screen to spot it.</div>
+           
+    
+    
+      <div id="all">
+        <div id="left">&nbsp;</div>
+        <div id="right">&nbsp;</div>
+        <div id="center">&nbsp;</div>
+        <div id="text1">flag changer</div>
+    </div>
+    
+    
+          
+        <script>
+               var allc = document.getElementById("all");
+               var colo = document.getElementById("left");
+               var colo2 = document.getElementById("right");
+               var colo3 = document.getElementById("center");
+    
+            function randomcolor() {
+                return Math.floor(Math.random() * 255);
+                
+                
+            }
+    
+    
+            allc.addEventListener('click', function () {
+    
+    
+    
+    
+                colo.style.backgroundColor = 'rgba(' 
+                    + randomcolor() + ',' + randomcolor() 
+                    + ',' + randomcolor() + '\)'
+    
+                    colo2.style.backgroundColor = 'rgba(' 
+                    + randomcolor() + ',' + randomcolor() 
+                    + ',' + randomcolor() + '\)'
+    
+                    colo3.style.backgroundColor = 'rgba(' 
+                    + randomcolor() + ',' + randomcolor() 
+                    + ',' + randomcolor() + '\)'
+    
+                    text1.style.backgroundColor = "rgb(138, 168, 171)" 
+           
+           
+    
+            
+            
+        })
+        
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    </body>
+      
+    </html>
+</body>
+</html>
